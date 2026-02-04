@@ -7,7 +7,7 @@ from sklearn.metrics import mean_absolute_error
 from datetime import datetime
 
 def run_accurate_update():
-    url = 'https://data.cityofnewyork.us/resource/i4gi-tjb9.json?$limit=5000'
+    url = 'https://data.cityofnewyork.us/resource/i4gi-tjb9.json?$limit=200'
     try:
         response = requests.get(url).json()
         df = pd.DataFrame(response)
