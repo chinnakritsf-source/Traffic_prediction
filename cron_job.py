@@ -9,7 +9,7 @@ import os
 
 def run_accurate_update():
     print(f"🚀 Starting update at: {datetime.now()}")
-    url = 'https://data.cityofnewyork.us/resource/i4gi-tjb9.json?$limit=5000'
+    url = 'https://data.cityofnewyork.us/resource/i4gi-tjb9.json?$limit=100'
     
     try:
         print("📡 Step 1: Fetching data from NYC API...")
