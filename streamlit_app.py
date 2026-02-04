@@ -19,7 +19,7 @@ if st.button("🚀 Get Traffic Prediction", type="primary"):
             # Fetch data
             st.info("📡 [STEP 1/7] Fetching live data from NYC...")
             url = 'https://data.cityofnewyork.us/resource/i4gi-tjb9.json?$limit=2000'
-            response = requests.get(url, timeout=90)
+            response = requests.get(url, timeout=150)
             df = pd.DataFrame(response.json())
             st.success(f"✓ Loaded {len(df)} records")
             
