@@ -8,6 +8,8 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
@@ -18,7 +20,8 @@ jobs:
           python-version: '3.9'
 
       - name: Install dependencies
-        run: pip install pandas requests scikit-learn
+        run: |
+          pip install pandas requests scikit-learn numpy
 
       - name: Run calculation
         run: python cron_job.py
