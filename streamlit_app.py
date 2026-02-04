@@ -13,7 +13,7 @@ st.markdown("Fetching live data and training a machine learning model in real-ti
 
 # --- STEP 1-3: Data Fetching and Cleaning ---
 with st.status("Connecting to NYC Traffic API...", expanded=True) as status:
-    url = 'https://data.cityofnewyork.us/resource/i4gi-tjb9.json?$limit=2000'
+    url = 'https://data.cityofnewyork.us/resource/i4gi-tjb9.json?$limit=500'
     try:
         data = requests.get(url).json()
         df = pd.DataFrame(data)
